@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            //1. Nhập một số bất kỳ từ bàn phím và kiểm tra xem đó là số chẵn hay số lẻ và
+            //   in ra thông báo tương ứng.
+            int soNguyen;
+            Console.Write("Mời nhập một số:");
+            soNguyen = Convert.ToInt32(Console.ReadLine());
+            if (soNguyen % 2 ==0)
+            {
+                Console.WriteLine("Số chẵn");
+            }
+            else
+            {
+                Console.WriteLine("Số lẻ");
+            }
+            /*
+             * 2. Viết chương trình C# tính điểm của sinh viên.
+             *    Chương trình này sẽ đọc vào các loại điểm của sinh viên(điểm chuyên cần,
+             *    điểm giữa kỳ, và điểm cuối kỳ) và xếp loại điểm theo quy luật sau:
+             *      – if điểm trung bình >= 8 =>loại = A
+             *      – if điểm trung bình >= 6.5 =>loại = B
+             *      – if điểm trung bình >= 5 =>loại = C
+             *      – if điểm trung bình < 5 =>loại = D
+            */
+            Console.OutputEncoding=Encoding.UTF8;
+            float diemCC, diemGK, diemCK, diemTB;
+            Console.Write("Mời nhập diểm chyên cần:");
+            diemCC = float.Parse(Console.ReadLine());
+            Console.Write("Mời nhập diểm giữa kì:");
+            diemGK = float.Parse(Console.ReadLine());
+            Console.Write("Mời nhập diểm cuối:");
+            diemCK = float.Parse(Console.ReadLine());
+            diemTB = (diemCC + diemGK + diemCK) / 3;
+            Console.WriteLine($"Điểm trung bình:{diemTB}");
+            if (diemTB>=0 && diemTB<=10)
+            {
+                if (diemTB >= 8)
+                {
+                    Console.WriteLine("loại = A");
+               }
+               else if (diemTB >= 6.5)
+               {
+                    Console.WriteLine("loại = B");
+                }
+                else if (diemTB >= 5)
+                {
+                    Console.WriteLine("loại = C");
+                }
+
+                else
+                {
+                    Console.WriteLine("loại = D");
+                }
+            }
+            else
+            {
+                Console.WriteLine("mời nhập lại");
+            }
+            //3. Nhập bán kính hình tròn sau đó tìm và hiển thị chu vi và diện tích hình tròn đó.
+            double r, C, S, π=3.14f;
+            Console.Write("Mời nhập bán kính:");
+            r = float.Parse(Console.ReadLine());
+            C = (r * 2) * π;
+            Console.WriteLine($"Chu vi ={C}");
+            S = (r*r) * π;
+            Console.WriteLine($"Diện tích ={S}");
+            Console.ReadKey();
+        }
+    }
+}
