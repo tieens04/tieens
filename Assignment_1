@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            string choice;
+            do
+            {
+                Console.WriteLine("Chương trình quản lý Sinh Viên");
+                Console.WriteLine("1. Thêm sinh viên");
+                Console.WriteLine("2. Xuất danh sách Sinh Viên");
+                Console.WriteLine("3. Sửa sinh viên");
+                Console.WriteLine("4. Xóa sinh viên");
+                Console.WriteLine("5. Tìm kiếm danh sách Sinh Viên");
+                Console.WriteLine("6. Xuất 5 Sinh viên có điểm trung bình từ 8.5 đến 9.0trở lênt");
+                Console.WriteLine("7. Xuất 5 Sinh viên có điểm trung bình từ 5 trở xuống");
+                Console.WriteLine("8. Xuất danh sách sinh viên phải học lại ra màn hình khi điểm dưới 5.");
+                Console.WriteLine("9. Xuất Sinh viên có điểm cao nhất khối nếu trùng điểm nhau xuất ra các bạn có điểm giống nhau đó.");
+                Console.WriteLine("10. Sắp xếp theo tên hoặc theo điểm");
+                Console.WriteLine("11. Thoát Chương Trình.");
+                Console.WriteLine("Mời chọn");
+                choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case "1":
+                        Console.WriteLine("1. Thêm sinh viên");
+                        break;
+                    case "2":
+                        Console.WriteLine("2. Xuất danh sách Sinh Viên");
+                        break;
+                    case "3":
+                        Console.WriteLine("3. Sửa sinh viên");
+                        break;
+                    case "4":
+                        Console.WriteLine("4. Xóa sinh viên");
+                        break;
+                    case "5":
+                        Console.WriteLine("5. Tìm kiếm danh sách Sinh Viên");
+                        break;
+                    case "6":
+                        Console.WriteLine("6. Xuất 5 Sinh viên có điểm trung bình từ 8.5 đến 9.0trở lênt");
+                        break;
+                    case "7":
+                        Console.WriteLine("7. Xuất 5 Sinh viên có điểm trung bình từ 5 trở xuống");
+                        break;
+                    case "8":
+                        Console.WriteLine("8. Xuất danh sách sinh viên phải học lại ra màn hình khi điểm dưới 5.");
+                        break;
+                    case "9":
+                        Console.WriteLine("9. Xuất Sinh viên có điểm cao nhất khối nếu trùng điểm nhau xuất ra các bạn có điểm giống nhau đó.");
+                        break;
+                    case "10":
+                        Console.WriteLine("10. Sắp xếp theo tên hoặc theo điểm");
+                        break;
+                    case "11":
+                        Console.WriteLine("11. Thoát Chương Trình.");
+                        break;
+                    default:
+                        Console.WriteLine("Mời nhập lại");
+                        break;
+                }
+            } while (choice != "11");
+
+            Console.ReadKey();
+        }
+    }
+}
